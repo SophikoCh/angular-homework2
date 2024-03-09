@@ -1,0 +1,9 @@
+<app-section [major]="major" (increment)="onIncrement()" [minor]="minor" (increment)="minorIncrement()"
+[majorLog]="majorLog" (increment)="onIncrement" [minorLog]="minorLog" ></app-section>
+
+
+<h1>Source code version</h1>
+<div>
+  <button (click)="minorIncrement()">New minor version</button>
+  <button (click)="onIncrement()"> New major version</button>
+</div>
