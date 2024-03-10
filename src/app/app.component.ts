@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Homework2';
-  
+
+  constructor() { }
   major: number = 0;
   majorLog: string = '';
   onIncrement() {
@@ -24,5 +25,13 @@ export class AppComponent {
     this.minorLog = "minor changed from " + this.minor + " to " + ++this.minor;
 
   }
-  
+  countAgree: number = 0;
+  onClickAgree(count: number) {
+    this.countAgree = count;
+  }
+  countDisagree: number = 0;
+  onClickDisagree(count: number) {
+    this.countDisagree = count;
+  }
+
 }

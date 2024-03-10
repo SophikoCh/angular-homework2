@@ -1,9 +1,19 @@
-<app-section [major]="major" (increment)="onIncrement()" [minor]="minor" (increment)="minorIncrement()"
-[majorLog]="majorLog" (increment)="onIncrement" [minorLog]="minorLog" ></app-section>
+<div class="functions">
+  <div class="task1">
+    <h1>Source code version</h1>
+    <div class="button">
+      <button (click)="minorIncrement()">New minor version</button>
+      <button (click)="onIncrement()"> New major version</button>
+    </div>
+  </div>
 
-
-<h1>Source code version</h1>
-<div>
-  <button (click)="minorIncrement()">New minor version</button>
-  <button (click)="onIncrement()"> New major version</button>
+  <div class="task2">
+    <h1>Should mankind colonize the Universe? </h1>
+    <span> Agree {{countAgree}} </span>
+    <span> Disagree {{countDisagree}} </span>
+  </div>
 </div>
+
+<app-section [major]="major" [minor]="minor" [majorLog]="majorLog" (increment)="onIncrement" [minorLog]="minorLog"
+(clickAgree)="onClickAgree($event)" 
+    ></app-section>
