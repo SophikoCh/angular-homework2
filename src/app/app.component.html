@@ -1,19 +1,22 @@
 <div class="functions">
+
   <div class="task1">
     <h1>Source code version</h1>
     <div class="button">
       <button (click)="minorIncrement()">New minor version</button>
       <button (click)="onIncrement()"> New major version</button>
     </div>
+    <app-section [major]="major" [minor]="minor" [majorLog]="majorLog" (increment)="onIncrement"
+      [minorLog]="minorLog"></app-section>
   </div>
 
   <div class="task2">
+
     <h1>Should mankind colonize the Universe? </h1>
-    <span> Agree {{countAgree}} </span>
-    <span> Disagree {{countDisagree}} </span>
+    <span> Agree {{agreeCount}} </span>
+    <span> Disagree {{disagreeCount}} </span>
+    <app-section-task2 [name]="'Dr. IQ'" (agreeEvent)="onChildAgree()" (disagreeEvent)="onChildDisagree()"></app-section-task2>
+    <app-section-task2 [name]="'Celeritas'"(agreeEvent)="onChildAgree()" (disagreeEvent)="onChildDisagree()"></app-section-task2>
+    <app-section-task2 [name]="'Bombasto'" (agreeEvent)="onChildAgree()"(disagreeEvent)="onChildDisagree()"></app-section-task2>
   </div>
 </div>
-
-<app-section [major]="major" [minor]="minor" [majorLog]="majorLog" (increment)="onIncrement" [minorLog]="minorLog"
-(clickAgree)="onClickAgree($event)" 
-    ></app-section>

@@ -19,23 +19,10 @@ export class SectionComponent implements OnInit {
 
  
  
-  @Output() clickAgree = new EventEmitter();
-
-  // onAgree() {
-  //   this.agree++;
-  //   this.disagree = 0;
-  // }
   
-  // onDisagree() { 
-  //   this.disagree++;
-  //   this.agree = 0; 
-  // }
   
   ngOnInit(): void {
   }
 
 
-  onAgree(count:number) {
-    this.clickAgree.emit(count);
-  }
 }

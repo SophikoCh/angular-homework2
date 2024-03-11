@@ -25,13 +25,17 @@ export class AppComponent {
     this.minorLog = "minor changed from " + this.minor + " to " + ++this.minor;
 
   }
-  countAgree: number = 0;
-  onClickAgree(count: number) {
-    this.countAgree = count;
+  
+
+  agreeCount: number = 0;
+  disagreeCount: number = 0;
+
+  onChildAgree() {
+    this.agreeCount++;
   }
-  countDisagree: number = 0;
-  onClickDisagree(count: number) {
-    this.countDisagree = count;
+  
+  onChildDisagree() {
+    this.disagreeCount++;
   }
 
 }
